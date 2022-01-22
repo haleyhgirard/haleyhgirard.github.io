@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haley Girard</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+      <!--navigation-->
+      <nav>
+        <!--logo-->
+        <a href="#" class="logo">HG</a>
+        <!--menu-->
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutMePage.html">About Me</a></li>
+          <li><a href="hobbiesPage.html">Hobbies</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="more.html">More</a></li>
+          <li><a href="future.html">Future</a></li>
+          <li><a href="quotes.html">Quotes</a></li>
+        </ul>
+      </nav>
+
+    <div class="top">
+    <h2 id="text"><span>Quotes that I </span><br>live by</h2>
+
+    <img src="bird1.png" id="bird1">
+    <img src="bird2.png" id="bird2">
+    <img src="forest.png" id="forest">
+    <img src="rocks.png" id="rocks">
+    <img src="water.png" id="water">
+    </div>
+    <div class="sec">
+      <h2>Quotes</h2>
+      <p><b>&nbsp;&nbsp;"Until one has loved an animal, a part of one's soul remains unawakened."</b> - Anatole France</p>
+      <p><b>&nbsp;&nbsp;"If you do what you've always done, you'll get what you've always gotten."</b> - Tony Robbins</P>
+      <p><b>&nbsp;&nbsp;"If people knew the weight of words, they would give more value to silence."</b> - Itachi Uchiha,<i> Naruto</i></p>
+      <p><b>&nbsp;&nbsp;"If you don't share someone's pain, you can never understand them."</b> - Nagato,<i> Naruto</i></p>
+      <p><b>&nbsp;&nbsp;"While you’re alive, you need a reason for your existence. Being unable to find one is the same as being dead."</b> - Naruto Uzumaki,<i> Naruto</i></p>
+      <p><b>&nbsp;&nbsp;"Never forget what you are, the rest of the world will not. Wear it like armor and it can never be used to hurt you."</b> - Tyrion Lannister, <i>Game of Thrones</i></P>
+      <div id="clickMe">
+          <h1><br>Congrats! You've found the hidden fun at the bottom of the boring page! <br><i>Click the image below to initiate cat-pop.</i></h1>
+          <div id="clickMe" class="closed">
+        </div>
+      </div>
+    </div>
+    <script>
+      var catPop = document.getElementById('clickMe');
+
+      catPop.addEventListener('click', function(catPop){
+        catPop.target.classList.toggle('open');
+      })
+
+    </script>
+
+    <script>
+      let text = document.getElementById('text');
+      let bird1 = document.getElementById('bird1');
+      let bird2 = document.getElementById('bird2');
+      let rocks = document.getElementById('rocks');
+      let forest = document.getElementById('forest');
+      let water = document.getElementById('water');
+      let nav = document.getElementById('nav');
+
+      window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+
+        text.style.top = 20 + value * -0.5 + '%';
+
+        bird1.style.top  = value * -1.5 + 'px';
+
+        bird2.style.top  = value * -1.5 + 'px';
+        bird2.style.left  = value * -0.5 + 'px';
+
+        rocks.style.top = value * -0.12 + 'px';
+        forest.style.top = value * 0.25 + 'px';
+
+        nav.style.top = value * 0.5 + 'px';
+      })
+    </script>
+  </body>
+</html>
